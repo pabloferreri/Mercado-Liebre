@@ -1,0 +1,251 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*--------------------------------------------- HEADER---------------------------------------- */
+.main-header{
+    background-color: #EAC926;
+    padding: 15px;
+   
+}
+
+.top-header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-bottom: 8px ;
+}
+
+.search-bar input{
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 3px;
+}
+
+.search-bar {
+    align-items: center;
+    
+}
+
+.logo{
+    width: 50%;
+}
+
+.copy-navbar{
+    text-align: center;
+    font-weight: 400;
+}
+
+.search-bar{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.bottom-header{
+    display: none;
+}
+
+.bottom-header ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bottom-header a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.burger-menu{
+    display: block;
+    width: 50px;
+    color: #ffffff;
+    background-color: #03264C;
+    margin: auto;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ----------------------------------------MAIN ------------------------------------*/
+
+.main-section{
+    width: 90%;
+    margin: auto;
+    
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-bottom: 10px;
+}
+
+.main-section article img{
+    width: 90%;
+    align-self: center;
+}
+
+.main-section h3{
+    font-size: 24px;
+}
+
+.product-info{
+    border: solid 1px #ebebeb;
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    position: relative;
+}
+
+.price{
+    font-size: 18px;
+    width: 30%;
+}
+
+
+.price,.discount{
+    font-weight: 600;
+    flex-wrap: nowrap;
+    display: block;
+}
+
+.discount{
+    color: #39b54a;
+    width:70%;
+}
+
+.description{
+    display: none;
+    display: block;
+
+}
+
+.product-info i{
+    position: absolute;
+}
+
+.description,
+.discount{
+    font-size: 16px;
+}
+
+/* ------------------------------------- FOOTER------------------------------------------- */
+
+.main-footer{
+    font-family: 'Roboto',sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-footer div{
+    list-style: none;
+    text-align: center;
+    text-decoration: none;
+}
+
+.main-footer p{
+    font-size: 12px;
+    margin-top: 0px;
+}
+
+.main-footer h4{
+    font-size: 18px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.main-footer i{
+    font-size: 2em;
+    color: #1259c3;
+    margin-bottom: 10px;
+}
+
+/*-----------------------------------------------------------mediaquerys-------------------------------------------------------*/
+
+@media (min-width: 361px){
+
+    /*--------------------------------------------- HEADER---------------------------------------- */
+
+    .bottom-header,.description{
+        display: contents;
+    }
+
+    .burger-menu{
+        display: none;
+    }
+
+    .bottom-header{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .bottom-header ul{
+        display: flex;
+        
+    }
+    .bottom-header li{
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 8px;
+    }
+
+    .top-header{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .logo, .search-bar, .copy-navbar{
+        width: 33%;
+    }
+
+    /* ----------------------------------------MAIN ------------------------------------*/
+
+    .product{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 50%;
+    }
+
+
+    .product-group{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        flex-direction: row;
+    }
+
+    .price,.description,.discount{
+        font-size: 18px;
+    }
+
+    /* ------------------------------------- FOOTER------------------------------------------- */
+
+
+}
+
+
+@media (min-width: 769px){
+    .product{
+        width: 25%; 
+    }
+
+    .price,.description,.discount{
+        font-size: 14px;
+    }
+
+
+}
