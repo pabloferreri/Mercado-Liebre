@@ -42,7 +42,7 @@
             <ul class="right-bar">
                 <li><a href="/register">Crea tu cuenta <i class="far fa-id-card"></i></a></li>
                 <li><a href="/login">Ingresa <i class="fas fa-sign-in-alt"></i></a></li>
-                <li><a href="#">Mis compras</a> <i class="fas fa-shopping-basket"></i></li>
+                <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i</a></li>
             </ul>
             
         </nav>
@@ -52,37 +52,50 @@
     </header>
 
     <main>
-        <div class="conteiner-register">
-            <form action="/" method="GET">
+        <div class="conteiner-form">
+            <form action="/" method="POST">
                 <div>
                     <label>Nombre y apellido</label>
-                    <input type="text" name="nombre-apellido" required>
+                    <input type="text" name="nombre-apellido" class="form-bar" required>
                 </div>
                 <div>
                     <label>Nombre de usuario</label>
-                    <input type="text" name="nombre-usuario" required pattern=".{4,}" title="El nombre de usuario debe contener al menos 4 caracteres">
+                    <input type="text" name="nombre-usuario" class="form-bar" required pattern=".{4,}" title="El nombre de usuario debe contener al menos 4 caracteres">
                 </div>
                 <div>
                     <label>Fecha de nacimiento</label>
-                    <input type="date" name="fecha-nacimiento" required>
+                    <input type="date" name="fecha-nacimiento" class="form-bar" required>
                 </div>
                 <div>
                     <label>Domicilio</label>
-                    <input type="number" name="address" required>
+                    <input type="number" name="address" class="form-bar" required>
                 </div>
-                categoria-interes
+               
                 <div>
                     <label>Perfil del usuario</label>
-                    <input type="radio" name="perfil-usuario" value="Si"> Comprar
-                    <input type="radio" name="perfil-usuario" value="No"> Vender
+                    <section class="form-bar profile-bar">
+                        Comprar
+                        <input  type="radio" name="perfil-usuario" value="Si"> 
+                        Vender
+                        <input  type="radio" name="perfil-usuario" value="No"> 
+                    </section>
                 </div>
+
                 <div>
-                    <label>Perfil del usuario</label>
-                    <input type="checkbox" name="categoria-interes" value="electro"> Electro 
-                    <input type="checkbox" name="categoria-interes" value="moda"> Moda
-                    <input type="checkbox" name="categoria-interes" value="hogar"> Hogar
-                    <input type="checkbox" name="categoria-interes" value="jugueteria"> Jugueteria
-                    <input type="checkbox" name="categoria-interes" value="vida-sana"> Vida-Sana
+                    <label> Categorías de interés</label>
+                    <section class="interes-categories">
+                        
+                        <input type="checkbox" name="categoria-interes" value="electro">  
+                        <option>Electro</option>
+                        <input type="checkbox" name="categoria-interes" value="moda"> 
+                        <option>Moda</option>
+                        <input type="checkbox" name="categoria-interes" value="hogar"> 
+                        <option>Hogar</option>
+                        <input type="checkbox" name="categoria-interes" value="jugueteria"> 
+                        <option>Jugueteria</option>
+                        <input type="checkbox" name="categoria-interes" value="vida-sana"> 
+                        <option> Vida-Sana</option>
+                    </section>
                 </div>
                 <div>
                     <label>Foto de perfil</label>
@@ -90,14 +103,16 @@
                 </div>
                 <div>
                     <label>Contraseña</label>
-                    <input type="password" name="password" pattern=".{8,}" title="La contraseña debe contener al menos 4 caracteres" required>
+                    <input type="password" name="password" pattern=".{8,}" title="La contraseña debe contener al menos 4 caracteres" class="form-bar" required>
                 </div>
                 <div>
                     <label>Confirmar contraseña</label>
-                    <input type="password" name="confirm-password" required>
+                    <input type="password" name="confirm-password" class="form-bar" required>
                 </div>
-                <button type="reset">Borrar</button>
-                <button type="submit">Enviar</button>
+                <div>
+                    <button type="reset">Borrar</button>
+                    <button type="submit">Enviar</button>
+                </div>
             </form>
 
         </div>

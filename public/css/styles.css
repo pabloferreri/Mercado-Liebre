@@ -102,17 +102,14 @@
 
 .product-info{
     border: solid 1px #ebebeb;
-    margin: 15px;
-    display: flex;
+    margin: 6px;
+    display: -webkit-box;
     flex-wrap: wrap;
     align-items: baseline;
     position: relative;
 }
 
-.price{
-    font-size: 18px;
-    width: 30%;
-}
+
 
 
 .price,.discount{
@@ -124,6 +121,11 @@
 .discount{
     color: #39b54a;
     width:70%;
+}
+
+.price{
+    font-size: 18px;
+    width: 30%;
 }
 
 .description{
@@ -178,9 +180,97 @@
     margin-bottom: 10px;
 }
 
+
+/*--------------------------------------------------Login - Register ------------------------------------------------------------*/
+
+.conteiner-form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    background-color: #ebebeb;
+}
+
+.conteiner-form form{
+    margin: 15px 0px;
+    line-height: 30px;
+    
+}
+
+.profile-bar{
+    padding: 0px;
+}
+
+.conteiner-form form div{
+    padding:  5px 30px;
+}
+
+.interes-categories{
+    font-weight: 400;
+}
+
+.interes-categories input{
+    vertical-align: middle;
+    width: 5%;
+}
+
+.interes-categories option{
+    width: 90%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.conteiner-form label{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.conteiner-form .form-bar{
+    width: 100%;
+    height: 30px;
+    border: none; 
+    border-radius: 5px;
+    margin: 14px 0px;
+
+}
+
+.conteiner-form form div button{
+    background-color: #1259c3;
+    color: #ebebeb;
+    text-align: center;
+    border-radius: 5px;
+    width: 80px;
+    height:  30px;
+    margin-right: 15px;
+    border: none;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);;
+}
+
+.user-profile{
+    display: flex;
+    flex-direction: row;
+}
+
+.button-section{
+    padding: 5px 30px;
+}
+.buttom-send-login{
+background-color: #1259c3;
+color: #ebebeb;
+text-align: center;
+border-radius: 5px;
+width: 100%;
+height: 30px;
+margin-top: 15px;
+border: none;
+box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+
+
 /*-----------------------------------------------------------mediaquerys-------------------------------------------------------*/
 
-@media (min-width: 361px){
+@media (min-width: 376px){
 
     /*--------------------------------------------- HEADER---------------------------------------- */
 
@@ -222,7 +312,7 @@
 
     .product{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        width: 45%;
+        width: 43%;
         margin: 8px;
     }
 
@@ -235,19 +325,28 @@
         justify-content: center;
     }
 
+    /*.discount{
+        width: 90%;
+    }*/
+
     .price,.description,.discount{
         font-size: 18px;
     }
+
+    
 
     /* ------------------------------------- FOOTER------------------------------------------- */
 
 
 }
 
-
 @media (min-width: 769px){
     .product{
-        width: 23%; 
+        width: 22%; 
+    }
+
+    .discount .price {
+        width: 50%;
     }
 
     .price,.description,.discount{
@@ -255,6 +354,16 @@
     }
 
     .product-group{
+        
         justify-content: center;
     }
+
+    .conteiner-form{
+        width: 60%;
+        border-radius: 15px;
+        margin: 30px auto;
+    }
+
+    
+
 }
