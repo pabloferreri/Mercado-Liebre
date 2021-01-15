@@ -109,8 +109,13 @@
     position: relative;
 }
 
-
-
+.product-info i{
+    position: absolute;
+    bottom: 77%;
+    left: 83%;
+    color: #39b54a;
+    transition: all .5s;
+}
 
 .price,.discount{
     font-weight: 600;
@@ -129,13 +134,17 @@
 }
 
 .description{
-    display: none;
     display: block;
-    
+    opacity: 0;
+    transition: all .3s ease-in;
 }
 
-.product-info i{
-    position: absolute;
+.product:hover .description {
+    opacity: 1;
+}
+
+.product:hover .product-info .fa-truck {
+    transform: rotateZ(360deg);
 }
 
 .description,
@@ -147,7 +156,6 @@
 /* ------------------------------------- FOOTER------------------------------------------- */
 
 .main-footer{
-    font-family: 'Roboto',sans-serif;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -162,6 +170,12 @@
 
 .main-footer article{
     margin: 15px;
+    text-align: center;
+    transition: color .5s ease-in;
+}
+
+.main-footer article:hover i {
+    color: #39b54a;
 }
 
 .main-footer p{
@@ -281,10 +295,6 @@ border: none;
 
     /*--------------------------------------------- HEADER---------------------------------------- */
 
-    .bottom-header,.description{
-        display: contents;
-    }
-
     .burger-menu{
         display: none;
     }
@@ -318,9 +328,14 @@ border: none;
     /* ----------------------------------------MAIN ------------------------------------*/
 
     .product{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+       
         width: 43%;
         margin: 8px;
+        transition: all .4s ease-in;
+    }
+
+    .product:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 
 
@@ -368,6 +383,12 @@ border: none;
         margin: 30px auto;
     }
 
-    
+    /* ------------------------------------- FOOTER------------------------------------------- */
+
+    .main-footer div{
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+    }
 
 }
